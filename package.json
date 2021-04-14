@@ -1,0 +1,12 @@
+{
+  "name": "jupyter-wrapper",
+  "version": "1.0.0",
+  "description": "An electron wrapper for JupyterLab",
+  "main": "src/main.js",
+  "author": "chardon",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5"
+  }
+}
