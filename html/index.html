@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input URL of JupyterLab - JupyterLab Electron Wrapper</title>
+
+    <style>
+        .bottom-margin {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        const DEFAULT_URL = "http://127.0.0.1:8888/lab"
+
+        function updateRememberSettings() {
+            // ...
+        }
+
+        function getInputURL() {
+            return `${document.getElementById("url-field").value}?token=${document.getElementById("token-field").value}`
+        }
+
+        function enterJupyterLab() {
+            updateRememberSettings()
+            window.location = getInputURL()
+        }
+
+        function init() {
+            document.getElementById("url-field").value = DEFAULT_URL
+        }
+
+        document.onreadystatechange = e => {
+            init()
+        }
+    </script>
+
+    <form action="javascript:enterJupyterLab()">
+        <div style="text-align: center; vertical-align: auto; margin-top: 10%;">
+            <div class="bottom-margin">
+                <label for="url-field">JupyterLab URL</label><br />
+                <input id="url-field" name="url-field" type="url" placeholder="JupyterLab URL" required />
+            </div>
+            <div class="bottom-margin">
+                <label for="token-field">Token</label><br />
+                <input type="text" id="token-field" name="token-field" placeholder="Token" required>
+            </div>
+            <div class="bottom-margin" style="display: none;">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Do not ask me again</label>
+            </div>
+            <button id="enter-btn" type="submit">Enter</button>
+        </div>
+    </form>
+</body>
+
+</html>
