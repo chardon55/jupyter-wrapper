@@ -10,6 +10,8 @@
     "electron-builder": "^22.10.5"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder -mwl --ia32 --x64 --dir",
+    "dist": "electron-builder -mwl  --ia32 --x64"
   }
 }
