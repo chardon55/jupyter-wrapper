@@ -3,3 +3,4 @@
 *.ts    text eol=lf
 *.html  text
 *.htm   text
+*.tgz   -text
