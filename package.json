@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "An electron wrapper for JupyterLab",
   "main": "src/main.js",
-  "author": "chardon",
+  "author": {
+    "name": "chardon",
+    "email": "charlesdong_2000@outlook.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "electron": "^12.0.2",
